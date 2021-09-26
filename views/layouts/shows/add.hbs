@@ -1,0 +1,39 @@
+<div class="row justify-content-around">
+    <div class="card" style="width: 40rem;">
+        <div class="card-body">
+            <div class="text-center">
+                <form action="/shows" method="POST" autocomplete="on">
+                    <div class="form-group">
+                        <input type="hidden" name="_id" value="{{show._id}}">
+                        <label>Show ID</label>
+                        <input type="text" class="form-control" name="show_id" placeholder="Show ID" value={{show.show_id}}>
+                    </div>
+                    <div class="form-group">
+                        <label>Movie ID</label>
+                        <input type="text" class="form-control" name="movie_id"  placeholder="Movie ID" value={{show.movie_id}}>
+                    </div>
+                    <div class="form-group">
+                        <label>Theatre ID</label>
+                        <input type="text" class="form-control" name="theatre_id"  placeholder="Theatre ID" value={{show.theatre_id}}>
+                    </div>
+                    <div class="form-group">
+                        <label>Show Start</label>
+                        <input type="text" class="form-control" name="show_start"  placeholder="Show Start" value={{show.show_start}}>
+                    </div>
+                    <div class="form-group">
+                        <label>Show End</label>
+                        <input type="text" class="form-control" name="show_end"  placeholder="Show End" value={{show.show_end}}>
+                    </div>
+                    
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-info"><i class="fa fa-database" ></i>Submit</button>
+                        <a href="/shows" class="btn btn-danger">
+                            <i class="fa fa-list-alt"></i>View All
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

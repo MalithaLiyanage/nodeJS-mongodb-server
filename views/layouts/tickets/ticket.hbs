@@ -1,0 +1,54 @@
+<div class="row justify-content-around">
+    <div class="card" style="width: 80rem;">
+        <div class="card-body">
+	  		<div class="text-center">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Ticket ID </th>
+                            <th scope="col">Seat ID</th>
+                            <th scope="col">Show ID</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Class</th>
+                            <th scope="col">Edit/Delete</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                            {{#each list}}
+                            <tr>
+                                <td>{{this.ticket_id}}</td>
+                                <td>{{this.seat_id}}</td>
+                                <td>{{this.show_id}}</td>
+                                <td>{{this.price}}</td>
+                                <td>{{this.class}}</td>
+                                <td>
+                                    
+                                    <div class="row">
+                                        
+                                            <a href="/tickets/{{this._id}}">
+                                                <input class="btn btn-secondary btn-sm" type="submit" name="submit" value="Edit" />
+                                            </a>
+                                      
+
+                                        &nbsp;&nbsp;&nbsp;
+                                        
+                                            <a href="/deleteticket/{{this._id}}">
+                                                <input class="btn btn-danger btn-sm" type="submit" name="submit" value="Delete" onclick="return confirm('Are you sure to delete this record?');" />
+                                             </a>
+                                    </div>
+                                </td>
+                            </tr>
+                             {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+</div>
+<br>
+<br>
+<div class="row justify-content-around">
+    <a href='/ticketform' class="btn btn-info" role="button">Add New Booking</a> 
+</div>
